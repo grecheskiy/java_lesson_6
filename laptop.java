@@ -1,32 +1,4 @@
 package java_lesson_6;
-/*
-1 Подумать над структурой класса Ноутбук для магазина техники - выделить поля и методы. Реализовать в java.
-2 Создать множество ноутбуков.
-3 Написать метод, который будет запрашивать у пользователя критерий фильтрации и выведет ноутбуки, отвечающие фильтру.
-NoteBook notebook1 = new NoteBook
-NoteBook notebook2 = new NoteBook
-NoteBook notebook3 = new NoteBook
-NoteBook notebook4 = new NoteBook
-NoteBook notebook5 = new NoteBook
-
-Например: “Введите цифру, соответствующую необходимому критерию:
-1 - ОЗУ
-2 - Объем ЖД
-3 - Операционная система
-4 - Цвет
-
-Далее нужно запросить минимальные значения для указанных критериев - сохранить параметры фильтрации можно также в Map.
-
-Отфильтровать ноутбуки их первоначального множества и вывести проходящие по условиям.
-
-Класс сделать в отдельном файле
-
-приветствие
-Выбор параметра
-выбор конкретнее
-вывод подходящих
- */
-
  public class laptop{
     private String color;
     private Integer RAM;
@@ -41,7 +13,7 @@ NoteBook notebook5 = new NoteBook
         this.model = model;
         this.brand = brand;
         this.id = id;
-        System.out.println("Ноутбук марки "+"'"+ this.brand+"'"+" Модель "+this.model+" С id " +Integer.toString(this.id));
+        System.out.println("Brand "+"'"+ this.brand+"'"+" Model "+this.model+" ID " +Integer.toString(this.id));
     }
     public String getColor(){
         return this.color;
@@ -84,7 +56,7 @@ NoteBook notebook5 = new NoteBook
         if (isBooked==false){
             this.isBooked=true;
         }
-        else System.out.println("Этот ноутбук уже зарезервирован");
+        else System.out.println(" This laptop is already reserved");
     }
     @Override
     public String toString(){
@@ -104,8 +76,8 @@ NoteBook notebook5 = new NoteBook
         sb.append(System.lineSeparator());
         sb.append("RAM "+this.RAM);
         sb.append(System.lineSeparator());
-        if(this.isBooked==false) sb.append("Не зарезервирован");
-        else sb.append("Зарезервирован");
+        if(this.isBooked==false) sb.append(" This laptop is unreserved");
+        else sb.append(" reserved");
 
         
         return(sb.toString());

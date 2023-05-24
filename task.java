@@ -21,7 +21,7 @@ public class task{
         lap2.setRAM(8);
 
         laptop lap3=new laptop("AB97",67201,"Acer");
-        lap3.setColor("rose");
+        lap3.setColor("red");
         lap3.setHDD(900);
         lap3.setOS("Windows");
         lap3.setRAM(16);
@@ -41,36 +41,36 @@ public class task{
         HashSet <laptop> laptops = new HashSet<>(Arrays.asList(lap1,lap2,lap3,lap4,lap5));
         HashSet <laptop> res = new HashSet<>();
 
-        System.out.println("Здравствуйте");
-        System.out.print("Введите цифру, соответствующую необходимому критерию:\n 1 - ОЗУ \n 2 - Объем ЖД \n 3 - Операционная система \n 4 - цвет \n или 5, чтобы осуществить поиск\n");
+        System.out.println("Hello");
+        System.out.print("Enter a number:\n 1 - RAM \n 2 - HDD \n 3 - OS \n 4 - color \n or 5, to start searching\n");
         Scanner sc = new Scanner(System.in);
         Integer n = sc.nextInt();
         sc.nextLine();
         HashMap<String, Object> filters = new HashMap<>();
         while(n!=5){
         if(n==1){
-            System.out.println("Введите минимальную оперативную память");
+            System.out.println("Enter a RAM");
             Integer temp = sc.nextInt();
             sc.nextLine();
             filters.put("RAM", temp);
         }
         if(n==2){
-            System.out.println("Введите минимальный объем ЖД" );
+            System.out.println("Enter a HDD" );
             Integer temp = sc.nextInt();
             sc.nextLine();
             filters.put("HDD", temp);
         }
         if(n==3){
-            System.out.println("Введите ОС");
+            System.out.println("Enter a OS");
             String temp = sc.nextLine();
             filters.put("OS", temp);
         }
         if(n==4){
-            System.out.println("Введите цвет");
+            System.out.println("Enter a color");
             String temp = sc.nextLine();
             filters.put("color", temp);
         }
-        System.out.print("Введите цифру, соответствующую необходимому критерию:\n 1 - ОЗУ \n 2 - Объем ЖД \n 3 - Операционная система \n 4 - цвет \n или 5, чтобы осуществить поиск\n");
+        System.out.print("Enter a number:\n 1 - RAM \n 2 - HDD \n 3 - OS \n 4 - color \n or 5, search\n");
         n = sc.nextInt();
         sc.nextLine();
         sc.close(); 
